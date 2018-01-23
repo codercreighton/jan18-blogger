@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <div class="container post">
-  <center><h1>My Thoughts Out Loud</h1></center>
+  <center><h1>Cat Thoughts Out Loud</h1></center>
 
       <% @posts.each do |post| %>
      
@@ -10,7 +10,7 @@
           <div class="panel panel-heading">
           <h2><%= post.title %></h2>
 
-          <p>Written by: <%= post.author %></p> 
+          <p><%= image_tag post.user.avatar.thumb %>Written by: <%= post.user.username, class: "show-pic" %></p> 
           <p>Created on <%= post.created_at.strftime("%B %e, %Y at %l:%M %p") %></p> 
         </div>
         <div class="panel panel-body">
@@ -24,5 +24,5 @@
       <% end %>
   <br>
 
-  <%= link_to 'New Post', new_post_path %>
+  <%= link_to 'New Post', new_post_path, class: "btn btn-primary" %>
 </div>

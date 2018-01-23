@@ -13,13 +13,13 @@
 
 <div class="well">
   <div class="form-group">
-   
-    <%= form.text_field :title, id: :post_title, placeholder: "What is the title of your blog?", class: 'form-control' %>
+   <%= form.text_field :title, id: :post_title, placeholder: "What is the title of your blog?", class: 'form-control' %>
   </div>
 
   <div class="form-group">
-    <%= form.text_field :author, id: :post_author, placeholder: "What's your name?", class: 'form-control' %>
+    <%= form.hidden_field :user_id, value: current_user.id%>
   </div>
+
 
   <div class="form-group">
     <%= form.text_area :blog_entry, id: :post_blog_entry, placeholder: "What do you have to say?", class: 'form-control' %>

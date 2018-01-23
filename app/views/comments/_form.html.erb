@@ -14,8 +14,7 @@
  <div class="well"> 
 
   <div class="form-group">
-   
-    <%= form.text_field :author, id: :comment_author, placeholder: "What's your name?", class: 'form-control' %>
+    <%= form.hidden_field :user_id, value: current_user.id %>
   </div>
 
   <div class="form-group">
@@ -24,8 +23,6 @@
   </div>
 
   
-
-
   <div class="field">
     <!-- We want to be able to edit and delete comments from the Post show page -->
     <% if @post != nil  %>

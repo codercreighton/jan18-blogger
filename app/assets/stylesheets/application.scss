@@ -18,7 +18,7 @@
 @import 'bootstrap';
 
 body {
-		background: url(flower.jpg) no-repeat center fixed;
+		background: url(cat.jpg) no-repeat center fixed;
  		background-size: cover;
 
  }
@@ -58,4 +58,20 @@ body {
 
  .well{
  	background-color: #c3bcc6;
+ }
+
+.navbar-default{
+ 	background-color: #a97eba;
+ 	color: white;
+
+ }
+
+ .navbar-default li a:visited, .navbar-default li a:hover, .navbar-default .navbar-nav > li > a{
+ 	color: white;
+ }
+
+
+ .show-pic {
+ 	height: 200px;
+ 	width: 200px;
  }
